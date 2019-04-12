@@ -20,7 +20,7 @@ lazy val sparkLearning = (project in file(sparkLearningPName))
   .settings(
     name := sparkLearningPName,
     version := "0.1.0-SNAPSHOT",
-    libraryDependencies ++= akkaDependencies ++ sparkDependencies
+    libraryDependencies ++= akkaDependencies ++ sparkDependencies ++ scalaTestDependencies
   )
 
 val speechRecognitionPName = "speech-recognition"
@@ -29,5 +29,5 @@ lazy val speechRecognition = (project in file(speechRecognitionPName))
     name := speechRecognitionPName,
     version := "0.1.0-SNAPSHOT",
     resolvers += "Central maven 2" at "http://central.maven.org/maven2",
-    libraryDependencies ++= sphinxDependencies
+    libraryDependencies ++= sphinxDependencies ++ scalaTestDependencies
   )
